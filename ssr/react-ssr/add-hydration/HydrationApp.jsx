@@ -86,7 +86,7 @@ function InteractiveButton() {
   );
 }
 
-export default function HydrationApp() {
+export default function HydrationApp({ title }) {
   return (
     <html lang="ko">
       <head>
@@ -99,7 +99,7 @@ export default function HydrationApp() {
         <script src="/Main.js" async></script>
       </head>
       <body>
-        <h1>안녕하세요, 스트리밍 & 하이드레이션 테스트입니다.</h1>
+        <h1>{title}</h1>
         <hr />
         <Suspense fallback={<h2>헤더 로딩 중... 💨 (1초 소요)</h2>}>
           <SlowHeader />

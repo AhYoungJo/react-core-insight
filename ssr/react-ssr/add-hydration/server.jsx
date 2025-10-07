@@ -21,7 +21,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
 
-  const { pipe } = renderToPipeableStream(<HydrationApp />, {
+  const { pipe } = renderToPipeableStream(<HydrationApp title="서버에서 렌더링" />, {
     // 셸(초기 HTML)이 준비되면 스트리밍 시작
     onShellReady() {
       res.statusCode = 200;
