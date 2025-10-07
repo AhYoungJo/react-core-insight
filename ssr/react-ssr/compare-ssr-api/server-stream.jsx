@@ -1,7 +1,7 @@
 import express from "express";
 import React from "react";
 import { renderToPipeableStream } from "react-dom/server";
-import App from "./App";
+import App from "./App.jsx";
 
 const app = express();
 
